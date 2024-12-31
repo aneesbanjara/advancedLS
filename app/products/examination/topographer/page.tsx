@@ -1,7 +1,6 @@
 import Margin from "@/components/margin/Margin";
 import SubHeader from "@/components/subheader/SubHeader";
 import ca800Img from "@/public/images/examination/topographer/ca-800.png";
-import tritonImg from "@/public/images/diagnostics/OCT/triton.png";
 import Product from "@/components/product/Product";
 
 export default function Topographer() {
