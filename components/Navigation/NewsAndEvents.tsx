@@ -15,8 +15,8 @@ export default function NewsAndEvents() {
     {
       key: "2",
       label: (
-        <Link href="/news/gallary" className="">
-          GALLARY
+        <Link href="/news/gallery" className="">
+          GALLERY
         </Link>
       ),
     },

@@ -6,7 +6,7 @@ export default function Products() {
   const items: MenuProps["items"] = [
     {
       key: "8",
-      label: "OPTHALMOLOGY",
+      label: "diagnostics",
       disabled: true,
     },
     {
@@ -15,7 +15,7 @@ export default function Products() {
     {
       key: "1",
       label: (
-        <Link href="/products/opthalmology/oct" className="">
+        <Link href="/products/diagnostics/oct" className="">
           OPTICAL COHERENCE TOMOGRAPHY
         </Link>
       ),
@@ -31,7 +31,7 @@ export default function Products() {
         {
           key: "1-1",
           label: (
-            <Link href="/products/opthalmology/oct/maestro2" className="">
+            <Link href="/products/diagnostics/oct/maestro2" className="">
               Maestro2
             </Link>
           ),
@@ -39,7 +39,7 @@ export default function Products() {
         {
           key: "1-2",
           label: (
-            <Link href="/products/opthalmology/oct/triton" className="">
+            <Link href="/products/diagnostics/oct/triton" className="">
               Triton
             </Link>
           ),
@@ -49,7 +49,7 @@ export default function Products() {
     {
       key: "2",
       label: (
-        <Link href="/products/opthalmology/slitlamps" className="">
+        <Link href="/products/diagnostics/slitlamps" className="">
           SLIT LAMPS
         </Link>
       ),
@@ -65,7 +65,7 @@ export default function Products() {
         {
           key: "2-1",
           label: (
-            <Link href="/products/opthalmology/sld301" className="">
+            <Link href="/products/diagnostics/sld301" className="">
               SL-D301
             </Link>
           ),
@@ -73,7 +73,7 @@ export default function Products() {
         {
           key: "2-2",
           label: (
-            <Link href="/products/opthalmology/sld2" className="">
+            <Link href="/products/diagnostics/sld2" className="">
               SL-D2
             </Link>
           ),
@@ -81,7 +81,7 @@ export default function Products() {
         {
           key: "2-3",
           label: (
-            <Link href="/products/opthalmology/sld701" className="">
+            <Link href="/products/diagnostics/sld701" className="">
               SL-D701
             </Link>
           ),
@@ -89,7 +89,7 @@ export default function Products() {
         {
           key: "2-4",
           label: (
-            <Link href="/products/opthalmology/sl2g" className="">
+            <Link href="/products/diagnostics/sl2g" className="">
               SL-2G
             </Link>
           ),
@@ -97,7 +97,7 @@ export default function Products() {
         {
           key: "2-5",
           label: (
-            <Link href="/products/opthalmology/sl2gled" className="">
+            <Link href="/products/diagnostics/sl2gled" className="">
               SL-2G LED
             </Link>
           ),
@@ -105,7 +105,7 @@ export default function Products() {
         {
           key: "2-6",
           label: (
-            <Link href="/products/opthalmology/dc4" className="">
+            <Link href="/products/diagnostics/dc4" className="">
               DC-4
             </Link>
           ),
@@ -115,7 +115,7 @@ export default function Products() {
     {
       key: "3",
       label: (
-        <Link href="/products/opthalmology/perimeters" className="">
+        <Link href="/products/diagnostics/perimeters" className="">
           PERIMETERS
         </Link>
       ),
@@ -123,7 +123,7 @@ export default function Products() {
     {
       key: "4",
       label: (
-        <Link href="/products/opthalmology/axiallength" className="">
+        <Link href="/products/diagnostics/axiallength" className="">
           AXIAL LENGTH
         </Link>
       ),
@@ -131,7 +131,7 @@ export default function Products() {
     {
       key: "5",
       label: (
-        <Link href="/products/opthalmology/biometer" className="">
+        <Link href="/products/diagnostics/biometer" className="">
           BIOMETER{" "}
         </Link>
       ),
@@ -139,7 +139,7 @@ export default function Products() {
     {
       key: "6",
       label: (
-        <Link href="/products/opthalmology/webfrontanalyser" className="">
+        <Link href="/products/diagnostics/webfrontanalyser" className="">
           WEBFRONT ANALYSER{" "}
         </Link>
       ),
@@ -147,21 +147,11 @@ export default function Products() {
     {
       key: "7",
       label: (
-        <Link href="/products/opthalmology/funduscameras" className="">
+        <Link href="/products/diagnostics/funduscameras" className="">
           FUNDUS CAMERAS{" "}
         </Link>
       ),
     },
   ];
-  return (
-    <Dropdown
-      menu={{ items }}
-      overlayStyle={{ width: 500, borderRadius: 0 }}
-      placement="bottom"
-    >
-      <Link href="/products" onClick={(e) => e.preventDefault()}>
-        PRODUCTS
-      </Link>
-    </Dropdown>
-  );
+  return <div className="cursor-pointer">PRODUCTS</div>;
 }

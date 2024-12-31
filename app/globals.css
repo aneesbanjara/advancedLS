@@ -41,6 +41,19 @@ body {
   bottom: -8px;
 }
 
+.headingUnderline::after {
+  content: "";
+  display: block;
+  width: 50px; /* Length of the underline */
+  height: 3px; /* Thickness of the underline */
+  background-color: #555; /* Underline color */
+  border-radius: 2px; /* Rounds the underline */
+  margin-top: -2px; /* Space between the heading and underline */
+  position: relative;
+  left: 50%; /* Starts the underline at the center */
+  transform: translateX(-50%); /* Adjusts it to align center */
+}
+
 .radialGradient {
   background-color: radial-gradient(circle at center, #add8e6, #00008b);
 }
@@ -54,148 +67,35 @@ body {
   font-size: 16px !important;
 }
 
-/* dropdown */
-.dropdown {
-  position: relative;
-  display: inline-block;
+.navSubMenu {
+  -webkit-animation-name: fadeInLeftBig;
+  animation-name: fadeInLeftBig;
 }
 
-/* Dropdown button */
-.dropdown-btn {
-  background-color: #3498db;
-  color: white;
-  padding: 10px 15px;
-  border: none;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-/* Dropdown content (hidden by default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: white;
-  min-width: 160px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-}
-
-/* Links inside dropdown */
-.dropdown-content a {
-  color: black;
-  padding: 10px 15px;
-  text-decoration: none;
-  display: block;
-}
-
-/* Change link color on hover */
-.dropdown-content a:hover {
-  background-color: #f1f1f1;
-}
-
-/* Show the dropdown content when the user hovers over the dropdown */
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-/* Change button background on hover */
-.dropdown:hover .dropdown-btn {
-  background-color: #2980b9;
-}
-
-.dropdown-content {
-  -webkit-animation-duration: 0.75s;
-  animation-duration: 0.75s;
-  -webkit-animation-name: bounceIn;
-  animation-name: bounceIn;
-}
-
-@-webkit-keyframes bounceIn {
-  from,
-  20%,
-  40%,
-  60%,
-  80%,
-  to {
-    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-  }
-
-  0% {
+@-webkit-keyframes fadeInLeftBig {
+  from {
     opacity: 0;
-    -webkit-transform: scale3d(0.3, 0.3, 0.3);
-    transform: scale3d(0.3, 0.3, 0.3);
-  }
-
-  20% {
-    -webkit-transform: scale3d(1.1, 1.1, 1.1);
-    transform: scale3d(1.1, 1.1, 1.1);
-  }
-
-  40% {
-    -webkit-transform: scale3d(0.9, 0.9, 0.9);
-    transform: scale3d(0.9, 0.9, 0.9);
-  }
-
-  60% {
-    opacity: 1;
-    -webkit-transform: scale3d(1.03, 1.03, 1.03);
-    transform: scale3d(1.03, 1.03, 1.03);
-  }
-
-  80% {
-    -webkit-transform: scale3d(0.97, 0.97, 0.97);
-    transform: scale3d(0.97, 0.97, 0.97);
+    -webkit-transform: translate3d(-2000px, 0, 0);
+    transform: translate3d(-2000px, 0, 0);
   }
 
   to {
     opacity: 1;
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
   }
 }
 
-@keyframes bounceIn {
-  from,
-  20%,
-  40%,
-  60%,
-  80%,
-  to {
-    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-  }
-
-  0% {
+@keyframes fadeInLeftBig {
+  from {
     opacity: 0;
-    -webkit-transform: scale3d(0.3, 0.3, 0.3);
-    transform: scale3d(0.3, 0.3, 0.3);
-  }
-
-  20% {
-    -webkit-transform: scale3d(1.1, 1.1, 1.1);
-    transform: scale3d(1.1, 1.1, 1.1);
-  }
-
-  40% {
-    -webkit-transform: scale3d(0.9, 0.9, 0.9);
-    transform: scale3d(0.9, 0.9, 0.9);
-  }
-
-  60% {
-    opacity: 1;
-    -webkit-transform: scale3d(1.03, 1.03, 1.03);
-    transform: scale3d(1.03, 1.03, 1.03);
-  }
-
-  80% {
-    -webkit-transform: scale3d(0.97, 0.97, 0.97);
-    transform: scale3d(0.97, 0.97, 0.97);
+    -webkit-transform: translate3d(-2000px, 0, 0);
+    transform: translate3d(-2000px, 0, 0);
   }
 
   to {
     opacity: 1;
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
   }
 }
