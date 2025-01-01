@@ -78,14 +78,15 @@ export default function ProductDetails({
           <div className="flex flex-col justify-center items-center gap-3">
             <PiFilePdf fontSize={40} />
             <span className="text-lg font-bold">{productName} Brochure</span>
-            <a
+            <Link
               href={pdfSrc}
               target="_blank"
               rel="noopener noreferrer"
               className="text-sm font-bold text-[#00008B] cursor-pointer"
+              locale={false}
             >
               Download Now
-            </a>
+            </Link>
           </div>
         )}
         <div>
