@@ -1,6 +1,10 @@
 import Link from "next/link";
 
-export default function Diagnostics() {
+type DiagnosticsProps = {
+  toggleProductsMenu: () => void;
+};
+
+export default function Diagnostics({ toggleProductsMenu }: DiagnosticsProps) {
   return (
     <div className="diagnostics ">
       <div className="flex justify-between flex-wrap my-4 p-4 w-full">
@@ -9,6 +13,7 @@ export default function Diagnostics() {
             <Link
               href="/products/diagnostics/oct"
               className="hover:text-[#E77723]"
+              onClick={() => toggleProductsMenu()}
             >
               OPTICAL COHERENCE TOMOGRAPHY
             </Link>
@@ -17,6 +22,7 @@ export default function Diagnostics() {
             <Link
               href="/products/diagnostics/oct/maestro2"
               className="hover:text-[#E77723]"
+              onClick={() => toggleProductsMenu()}
             >
               Maestro2
             </Link>
@@ -25,6 +31,7 @@ export default function Diagnostics() {
             <Link
               href="/products/diagnostics/oct/triton"
               className="hover:text-[#E77723]"
+              onClick={() => toggleProductsMenu()}
             >
               Triton
             </Link>
@@ -35,6 +42,7 @@ export default function Diagnostics() {
             <Link
               href="/products/diagnostics/perimeters"
               className="hover:text-[#E77723]"
+              onClick={() => toggleProductsMenu()}
             >
               PERIMETERS
             </Link>
@@ -43,6 +51,7 @@ export default function Diagnostics() {
             <Link
               href="/products/diagnostics/perimeters/henson-9000"
               className="hover:text-[#E77723]"
+              onClick={() => toggleProductsMenu()}
             >
               Henson 9000
             </Link>
@@ -53,6 +62,7 @@ export default function Diagnostics() {
             <Link
               href="/products/diagnostics/axiallength"
               className="hover:text-[#E77723]"
+              onClick={() => toggleProductsMenu()}
             >
               AXIAL LENGTH
             </Link>
@@ -61,6 +71,7 @@ export default function Diagnostics() {
             <Link
               href="/products/diagnostics/axiallength/myah"
               className="hover:text-[#E77723]"
+              onClick={() => toggleProductsMenu()}
             >
               MYAH
             </Link>
@@ -71,6 +82,7 @@ export default function Diagnostics() {
             <Link
               href="/products/diagnostics/biometer"
               className="hover:text-[#E77723]"
+              onClick={() => toggleProductsMenu()}
             >
               BIOMETER
             </Link>
@@ -79,6 +91,7 @@ export default function Diagnostics() {
             <Link
               href="/products/diagnostics/biometer/aladdin"
               className="hover:text-[#E77723]"
+              onClick={() => toggleProductsMenu()}
             >
               ALADDIN
             </Link>
@@ -89,6 +102,7 @@ export default function Diagnostics() {
             <Link
               href="/products/diagnostics/slit-lamps"
               className="hover:text-[#E77723]"
+              onClick={() => toggleProductsMenu()}
             >
               SLIT LAMPS
             </Link>
@@ -97,6 +111,7 @@ export default function Diagnostics() {
             <Link
               href="/products/diagnostics/slit-lamps/sl-d301"
               className="hover:text-[#E77723]"
+              onClick={() => toggleProductsMenu()}
             >
               SL-D301
             </Link>
@@ -105,6 +120,7 @@ export default function Diagnostics() {
             <Link
               href="/products/diagnostics/slit-lamps/sl-d2"
               className="hover:text-[#E77723]"
+              onClick={() => toggleProductsMenu()}
             >
               SL-D2
             </Link>
@@ -113,6 +129,7 @@ export default function Diagnostics() {
             <Link
               href="/products/diagnostics/slit-lamps/sl-d701"
               className="hover:text-[#E77723]"
+              onClick={() => toggleProductsMenu()}
             >
               SL-D701
             </Link>
@@ -121,6 +138,7 @@ export default function Diagnostics() {
             <Link
               href="/products/diagnostics/slit-lamps/sl-2g"
               className="hover:text-[#E77723]"
+              onClick={() => toggleProductsMenu()}
             >
               SL-2G
             </Link>
@@ -129,6 +147,7 @@ export default function Diagnostics() {
             <Link
               href="/products/diagnostics/slit-lamps/sl-d4"
               className="hover:text-[#E77723]"
+              onClick={() => toggleProductsMenu()}
             >
               SL-D4 LED
             </Link>
@@ -137,6 +156,7 @@ export default function Diagnostics() {
             <Link
               href="/products/diagnostics/slit-lamps/dc-4"
               className="hover:text-[#E77723]"
+              onClick={() => toggleProductsMenu()}
             >
               DC-4
             </Link>
@@ -147,6 +167,7 @@ export default function Diagnostics() {
             <Link
               href="/products/diagnostics/wavefront-analyzer"
               className="hover:text-[#E77723]"
+              onClick={() => toggleProductsMenu()}
             >
               WAVEFRONT ANALYSER
             </Link>
@@ -155,6 +176,7 @@ export default function Diagnostics() {
             <Link
               href="/products/diagnostics/wavefront-analyzer/kr-1w"
               className="hover:text-[#E77723]"
+              onClick={() => toggleProductsMenu()}
             >
               KR-1W
             </Link>
@@ -165,6 +187,7 @@ export default function Diagnostics() {
             <Link
               href="/products/diagnostics/fundus-cameras"
               className="hover:text-[#E77723]"
+              onClick={() => toggleProductsMenu()}
             >
               FUNDUS CAMERAS
             </Link>
@@ -173,6 +196,7 @@ export default function Diagnostics() {
             <Link
               href="/products/diagnostics/fundus-cameras/nw500"
               className="hover:text-[#E77723]"
+              onClick={() => toggleProductsMenu()}
             >
               NW500
             </Link>
@@ -181,6 +205,7 @@ export default function Diagnostics() {
             <Link
               href="/products/diagnostics/fundus-cameras/trc-nw400"
               className="hover:text-[#E77723]"
+              onClick={() => toggleProductsMenu()}
             >
               TRC-NW400
             </Link>
@@ -189,6 +214,7 @@ export default function Diagnostics() {
             <Link
               href="/products/diagnostics/fundus-cameras/trc-nw8series"
               className="hover:text-[#E77723]"
+              onClick={() => toggleProductsMenu()}
             >
               TRC-NW8 Series
             </Link>
@@ -197,6 +223,7 @@ export default function Diagnostics() {
             <Link
               href="/products/diagnostics/fundus-cameras/trc-50dx"
               className="hover:text-[#E77723]"
+              onClick={() => toggleProductsMenu()}
             >
               TRC-50DX
             </Link>

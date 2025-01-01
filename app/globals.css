@@ -34,11 +34,11 @@ body {
   height: 4px; /* Thickness of the underline */
   background-color: #0870bd; /* Underline color */
   border-radius: 2px; /* Rounds the underline */
-  margin-top: 8px; /* Space between the heading and underline */
+  margin-top: 2px; /* Space between the heading and underline */
   position: relative;
   left: 50%; /* Starts the underline at the center */
   transform: translateX(-50%); /* Adjusts it to align center */
-  bottom: -8px;
+  bottom: -3px;
 }
 
 .headingUnderline::after {

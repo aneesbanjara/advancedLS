@@ -1,6 +1,10 @@
 import Link from "next/link";
 
-export default function Software() {
+type SoftwareProps = {
+  toggleProductsMenu: () => void;
+};
+
+export default function Software({ toggleProductsMenu }: SoftwareProps) {
   return (
     <div className="diagnostics ">
       <div className="flex justify-between flex-wrap my-4 p-4 w-full">
@@ -9,6 +13,7 @@ export default function Software() {
             <Link
               href="/products/software/imagenet-6"
               className="hover:text-[#E77723]"
+              onClick={() => toggleProductsMenu()}
             >
               IMAGENET 6
             </Link>

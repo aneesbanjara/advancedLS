@@ -78,7 +78,7 @@ export default function AboutUs() {
       <div className="aboutUsHeading text-center text-3xl mx-[10%] my-[5%] px-4 py-2 rounded-xl text-[#8b229b] font-medium ">
         Our Commitment
       </div>
-      <div className="mx-[15%] my-[3%] text-2xl">
+      <div className="mx-[15%] my-[2%] text-2xl">
         <p>
           At Advanced Lifescience, we listen to our clients, understand their
           priorities, and align with their vision to build long-term

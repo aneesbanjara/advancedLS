@@ -1,6 +1,10 @@
 import Link from "next/link";
 
-export default function EXAMINATION() {
+type EXAMINATIONProps = {
+  toggleProductsMenu: () => void;
+};
+
+export default function EXAMINATION({ toggleProductsMenu }: EXAMINATIONProps) {
   return (
     <div className="diagnostics ">
       <div className="flex justify-between flex-wrap my-4 p-4 w-full">
@@ -9,6 +13,7 @@ export default function EXAMINATION() {
             <Link
               href="/products/examination/auto-refractometer"
               className="hover:text-[#E77723]"
+              onClick={() => toggleProductsMenu()}
             >
               AUTO REFRACTOMETER
             </Link>
@@ -17,6 +22,7 @@ export default function EXAMINATION() {
             <Link
               href="/products/examination/auto-refractometer/kr-1"
               className="hover:text-[#E77723]"
+              onClick={() => toggleProductsMenu()}
             >
               KR-1
             </Link>
@@ -25,6 +31,7 @@ export default function EXAMINATION() {
             <Link
               href="/products/examination/auto-refractometer/kr-800series"
               className="hover:text-[#E77723]"
+              onClick={() => toggleProductsMenu()}
             >
               KR-800 series
             </Link>
@@ -33,6 +40,7 @@ export default function EXAMINATION() {
             <Link
               href="/products/examination/auto-refractometer/rm-1"
               className="hover:text-[#E77723]"
+              onClick={() => toggleProductsMenu()}
             >
               RM-1
             </Link>
@@ -41,6 +49,7 @@ export default function EXAMINATION() {
             <Link
               href="/products/examination/auto-refractometer/rm-800"
               className="hover:text-[#E77723]"
+              onClick={() => toggleProductsMenu()}
             >
               RM-800
             </Link>
@@ -49,6 +58,7 @@ export default function EXAMINATION() {
             <Link
               href="/products/examination/auto-refractometer/kr-1w"
               className="hover:text-[#E77723]"
+              onClick={() => toggleProductsMenu()}
             >
               KR-1W
             </Link>
@@ -57,6 +67,7 @@ export default function EXAMINATION() {
             <Link
               href="/products/examination/auto-refractometer/trk-2p"
               className="hover:text-[#E77723]"
+              onClick={() => toggleProductsMenu()}
             >
               TRK-2P
             </Link>
@@ -67,6 +78,7 @@ export default function EXAMINATION() {
             <Link
               href="/products/examination/lensmeter"
               className="hover:text-[#E77723]"
+              onClick={() => toggleProductsMenu()}
             >
               LENSMETER
             </Link>
@@ -75,6 +87,7 @@ export default function EXAMINATION() {
             <Link
               href="/products/examination/lensmeter/solos"
               className="hover:text-[#E77723]"
+              onClick={() => toggleProductsMenu()}
             >
               SOLOS
             </Link>
@@ -83,6 +96,7 @@ export default function EXAMINATION() {
             <Link
               href="/products/examination/lensmeter/cl-300"
               className="hover:text-[#E77723]"
+              onClick={() => toggleProductsMenu()}
             >
               CL-300
             </Link>
@@ -91,6 +105,7 @@ export default function EXAMINATION() {
             <Link
               href="/products/examination/lensmeter/lm-8-8c"
               className="hover:text-[#E77723]"
+              onClick={() => toggleProductsMenu()}
             >
               LM-8/8C
             </Link>
@@ -101,6 +116,7 @@ export default function EXAMINATION() {
             <Link
               href="/products/examination/refraction-system"
               className="hover:text-[#E77723]"
+              onClick={() => toggleProductsMenu()}
             >
               REFRACTION SYSTEM
             </Link>
@@ -109,6 +125,7 @@ export default function EXAMINATION() {
             <Link
               href="/products/examination/refraction-system/chronos"
               className="hover:text-[#E77723]"
+              onClick={() => toggleProductsMenu()}
             >
               Chronos
             </Link>
@@ -119,6 +136,7 @@ export default function EXAMINATION() {
             <Link
               href="/products/examination/topographer"
               className="hover:text-[#E77723]"
+              onClick={() => toggleProductsMenu()}
             >
               TOPOGRAPHER
             </Link>
@@ -127,6 +145,7 @@ export default function EXAMINATION() {
             <Link
               href="/products/examination/topographer/ca-800"
               className="hover:text-[#E77723]"
+              onClick={() => toggleProductsMenu()}
             >
               CA-800
             </Link>
@@ -137,6 +156,7 @@ export default function EXAMINATION() {
             <Link
               href="/products/examination/tonometer"
               className="hover:text-[#E77723]"
+              onClick={() => toggleProductsMenu()}
             >
               TONOMETER
             </Link>
@@ -145,6 +165,7 @@ export default function EXAMINATION() {
             <Link
               href="/products/examination/tonometer/ct-800series"
               className="hover:text-[#E77723]"
+              onClick={() => toggleProductsMenu()}
             >
               CT-800/CT-800A
             </Link>
@@ -153,6 +174,7 @@ export default function EXAMINATION() {
             <Link
               href="/products/examination/tonometer/ct-1-1p"
               className="hover:text-[#E77723]"
+              onClick={() => toggleProductsMenu()}
             >
               CT-1/CT-1P
             </Link>
@@ -161,6 +183,7 @@ export default function EXAMINATION() {
             <Link
               href="/products/examination/tonometer/trk-2p"
               className="hover:text-[#E77723]"
+              onClick={() => toggleProductsMenu()}
             >
               TRK-2P
             </Link>
@@ -171,6 +194,7 @@ export default function EXAMINATION() {
             <Link
               href="/products/examination/vision-tester"
               className="hover:text-[#E77723]"
+              onClick={() => toggleProductsMenu()}
             >
               VISION TESTER
             </Link>
@@ -179,6 +203,7 @@ export default function EXAMINATION() {
             <Link
               href="/products/examination/vision-tester/cv-5000series-pro"
               className="hover:text-[#E77723]"
+              onClick={() => toggleProductsMenu()}
             >
               CV-5000S/PRO{" "}
             </Link>
@@ -187,6 +212,7 @@ export default function EXAMINATION() {
             <Link
               href="/products/examination/vision-tester/vt-10"
               className="hover:text-[#E77723]"
+              onClick={() => toggleProductsMenu()}
             >
               VT-10
             </Link>
@@ -197,6 +223,7 @@ export default function EXAMINATION() {
             <Link
               href="/products/examination/visual-acuity-chart"
               className="hover:text-[#E77723]"
+              onClick={() => toggleProductsMenu()}
             >
               VISUAL ACUITY CHART
             </Link>
@@ -205,6 +232,7 @@ export default function EXAMINATION() {
             <Link
               href="/products/examination/visual-acuity-chart/acp-8"
               className="hover:text-[#E77723]"
+              onClick={() => toggleProductsMenu()}
             >
               ACP-8
             </Link>
@@ -213,6 +241,7 @@ export default function EXAMINATION() {
             <Link
               href="/products/examination/visual-acuity-chart/mc-5-5s"
               className="hover:text-[#E77723]"
+              onClick={() => toggleProductsMenu()}
             >
               MC-5/MC-5S
             </Link>
@@ -221,6 +250,7 @@ export default function EXAMINATION() {
             <Link
               href="/products/examination/visual-acuity-chart/pc-50series"
               className="hover:text-[#E77723]"
+              onClick={() => toggleProductsMenu()}
             >
               PC-50 Series
             </Link>

@@ -18,7 +18,7 @@ export default function Product({
   para,
 }: ProductCardProps) {
   return (
-    <section className="flex flex-col justify-center items-center gap-8 w-[40%]">
+    <section className="flex flex-col justify-center items-center gap-8 w-[50%]">
       <Link href={linkTo ? linkTo : "/"} className="  no-underline rounded-md ">
         <Image
           src={imgSrc}

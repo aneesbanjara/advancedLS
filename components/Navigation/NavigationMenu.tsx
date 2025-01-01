@@ -245,12 +245,20 @@ export default function NavigationMenu() {
                 <IoMdClose size={30} />
               </div>
             </div>
-            {navSubMenu.isDiagnosticssSubMenuOpen && <Diagnostics />}
-            {navSubMenu.isExaminationSubMenuOpen && <EXAMINATION />}
-            {navSubMenu.isSoftwareSubMenuOpen && <Software />}
-            {navSubMenu.isDataManagementSubMenuOpen && <DataManagement />}
+            {navSubMenu.isDiagnosticssSubMenuOpen && (
+              <Diagnostics toggleProductsMenu={toggleProductsMenu} />
+            )}
+            {navSubMenu.isExaminationSubMenuOpen && (
+              <EXAMINATION toggleProductsMenu={toggleProductsMenu} />
+            )}
+            {navSubMenu.isSoftwareSubMenuOpen && (
+              <Software toggleProductsMenu={toggleProductsMenu} />
+            )}
+            {navSubMenu.isDataManagementSubMenuOpen && (
+              <DataManagement toggleProductsMenu={toggleProductsMenu} />
+            )}
             {navSubMenu.isTreatmentOrSurgicalSubMenuOpen && (
-              <TreatmentAndSurgical />
+              <TreatmentAndSurgical toggleProductsMenu={toggleProductsMenu} />
             )}
           </div>
         )}

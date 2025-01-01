@@ -28,7 +28,7 @@ export default function ProductDetails({
     <section>
       <SubHeader>{productName}</SubHeader>
       <Margin>
-        <div className="flex gap-4 w-full">
+        <div className="flex justify-between gap-4 w-full">
           <div className="flex flex-col gap-2">
             <p className="text-base">{para}</p>
             <Link href="#inquiry-section">
@@ -37,7 +37,7 @@ export default function ProductDetails({
               </Button>
             </Link>
           </div>
-          <div className=" w-[35%]">
+          <div className="w-[35%]">
             <Image
               src={imgSrc}
               alt={imgAlt}
@@ -83,7 +83,7 @@ export default function ProductDetails({
               target="_blank"
               rel="noopener noreferrer"
               className="text-sm font-bold text-[#00008B] cursor-pointer"
-              locale={false}
+              locale={"false"}
             >
               Download Now
             </Link>
