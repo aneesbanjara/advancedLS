@@ -1,17 +1,23 @@
-"use client";
-import SubHeader from "@/components/subheader/SubHeader";
-import { Alert, Button, Form, Input, message } from "antd";
+import { Modal } from "antd";
+import { Button, Form, Input, message } from "antd";
 import { useState } from "react";
+
+type RegisterModelProps = {
+  isEventUserRegisterModelOpen: boolean;
+  setIsEventUserRegisterModelOpen: (value: boolean) => void;
+};
 
 interface FormValues {
   fullName: string;
   email: string;
   phone: string;
   country: string;
-  feedback: string;
 }
 
-export default function Feedback() {
+export default function RegisterModel({
+  isEventUserRegisterModelOpen,
+  setIsEventUserRegisterModelOpen,
+}: RegisterModelProps) {
   const [loading, setLoading] = useState<boolean>(false);
   const [messageApi, contextHolder] = message.useMessage();
   const [form] = Form.useForm();
@@ -19,11 +25,12 @@ export default function Feedback() {
     setLoading(true);
     messageApi.open({
       type: "loading",
-      content: "Submitting your feedback...",
+      content: "Submitting your application...",
       duration: 0, // Keep it open until destroyed manually
     });
     try {
-      const response = await fetch("/api/feedback", {
+      setLoading(true);
+      const response = await fetch("/api/event-registration", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -32,26 +39,26 @@ export default function Feedback() {
       });
 
       if (response.ok) {
-        console.log("Feedback submitted successfully!");
+        console.log("Registration submitted successfully!");
         messageApi.destroy();
         messageApi.open({
           type: "success",
-          content: "Feedback submitted successfully!",
+          content: "Application submitted successfully!",
           duration: 3,
         });
         form.resetFields();
       } else {
         const errorData = await response.json();
-        console.error(`Failed to submit feedback: ${errorData.message}`);
+        console.error(`Failed to register: ${errorData.message}`);
         messageApi.destroy();
         messageApi.open({
           type: "error",
-          content: "Failed to submit feedback. Please try again.",
+          content: "Failed to submit application. Please try again.",
           duration: 3,
         });
       }
     } catch (error) {
-      console.error("Error submitting inquiry:", error);
+      console.error("Error submitting registration:", error);
       messageApi.destroy();
       messageApi.open({
         type: "error",
@@ -61,16 +68,16 @@ export default function Feedback() {
     } finally {
       setLoading(false);
     }
+    setIsEventUserRegisterModelOpen(false);
   };
   return (
-    <section>
+    <>
       {contextHolder}
-      <SubHeader>Feedback Form</SubHeader>
-      <div className="flex flex-col gap-5 mx-[20%] my-[5%]">
-        <Alert
-          description="We value your feedback and are committed to improving our services. Please share your thoughts and experiences to help us ensure the highest quality of service for all our customers. Your input is important to us!"
-          type="info"
-        />
+      <Modal
+        open={isEventUserRegisterModelOpen}
+        footer={null}
+        onCancel={() => setIsEventUserRegisterModelOpen(false)}
+      >
         <Form layout="vertical" onFinish={onFinish} form={form}>
           <div className="flex flex-row gap-8 justify-between">
             <Form.Item<FormValues>
@@ -123,25 +130,16 @@ export default function Feedback() {
               <Input type="number" placeholder="Enter your phone number" />
             </Form.Item>
           </div>
-          <div className="flex flex-row gap-8 justify-between">
-            <Form.Item<FormValues>
-              label="Feedback Message"
-              name="feedback"
-              rules={[{ required: true, message: "Please input your email!" }]}
-              className="w-full"
-            >
-              <Input.TextArea />
-            </Form.Item>
-          </div>
+
           <div className="flex flex-row gap-8 justify-between">
             <Form.Item label={null}>
               <Button type="primary" loading={loading} htmlType="submit">
-                Submit Feedback
+                Register
               </Button>
             </Form.Item>
           </div>
         </Form>
-      </div>
-    </section>
+      </Modal>
+    </>
   );
 }

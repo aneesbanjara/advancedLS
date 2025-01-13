@@ -1,9 +1,9 @@
+import SubHeader from "@/components/subheader/SubHeader";
+
 export default function Privacy() {
   return (
     <section>
-      <div className="flex flex-row justify-start bg-gradient-to-r from-[#ADD8E6] to-[#00008B] text-white px-36 py-8">
-        <div className="text-4xl">Privacy Policy</div>
-      </div>
+      <SubHeader>Privacy Policy</SubHeader>
       <div className="mx-[15%] my-[5%] text-2xl">
         <p>
           Advanced Lifescience values the privacy and security of our clients.

@@ -46,7 +46,7 @@ body {
   display: block;
   width: 50px; /* Length of the underline */
   height: 3px; /* Thickness of the underline */
-  background-color: #555; /* Underline color */
+  background-color: #e77723; /* Underline color */
   border-radius: 2px; /* Rounds the underline */
   margin-top: -2px; /* Space between the heading and underline */
   position: relative;
@@ -68,8 +68,22 @@ body {
 }
 
 .navSubMenu {
-  -webkit-animation-name: fadeInLeftBig;
-  animation-name: fadeInLeftBig;
+  overflow: hidden;
+  height: 0; /* Start with hidden menu */
+  opacity: 0;
+  -webkit-transform: translate3d(
+    -2000px,
+    0,
+    0
+  ); /* Initial position off-screen */
+  transform: translate3d(-2000px, 0, 0);
+}
+
+.navSubMenuOpen {
+  height: auto; /* Allows dynamic height */
+  opacity: 1;
+  -webkit-animation: fadeInLeftBig 0.3s ease-in-out forwards;
+  animation: fadeInLeftBig 0.3s ease-in-out forwards;
 }
 
 @-webkit-keyframes fadeInLeftBig {
@@ -78,7 +92,6 @@ body {
     -webkit-transform: translate3d(-2000px, 0, 0);
     transform: translate3d(-2000px, 0, 0);
   }
-
   to {
     opacity: 1;
     -webkit-transform: translate3d(0, 0, 0);
@@ -92,10 +105,57 @@ body {
     -webkit-transform: translate3d(-2000px, 0, 0);
     transform: translate3d(-2000px, 0, 0);
   }
-
   to {
     opacity: 1;
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
   }
+}
+
+.custom-ribbon {
+  font-size: 10px !important; /* Adjust text size */
+  height: 20px !important; /* Adjust the height of the ribbon */
+  line-height: 20px !important; /* Ensure the text is vertically aligned */
+  padding: 0 8px !important; /* Adjust horizontal padding */
+}
+
+.custom-ribbon {
+  top: -10px !important; /* Move the ribbon closer to the button */
+  right: -5px !important; /* Adjust horizontal positioning */
+}
+
+.custom-ribbon .ant-ribbon-color {
+  border-radius: 0px !important; /* Soften the edges of the ribbon */
+}
+
+@keyframes pulse-color {
+  0% {
+    background-color: #8a2299; /* Base color */
+    transform: scale(1); /* Normal size */
+    box-shadow: 0 0 8px #8a2299; /* Soft glow */
+  }
+  25% {
+    background-color: #ff4d4f; /* Eye-catching red */
+    transform: scale(1.05); /* Slightly bigger */
+    box-shadow: 0 0 12px #ff4d4f; /* Intense glow */
+  }
+  50% {
+    background-color: #6c1b7a; /* Slightly darker shade */
+    transform: scale(1); /* Back to normal size */
+    box-shadow: 0 0 10px #6c1b7a; /* Glow adjustment */
+  }
+  75% {
+    background-color: #ffcc00; /* Bright yellow for attention */
+    transform: scale(1.1); /* Slightly larger for emphasis */
+    box-shadow: 0 0 15px #ffcc00; /* Bright glow */
+  }
+  100% {
+    background-color: #8a2299; /* Reset to base color */
+    transform: scale(1); /* Back to normal */
+    box-shadow: 0 0 8px #8a2299; /* Original glow */
+  }
+}
+.pulsing-ribbon {
+  animation: pulse-color 2s infinite; /* Smooth 2-second loop */
+  border-radius: 4px; /* Optional rounded corners for better design */
 }

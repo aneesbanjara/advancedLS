@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header/header";
 import Footer from "@/components/home/carousel/Footer";
+import CustomFloatButton from "@/components/floats/CustomFloatbutton";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,6 +18,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Advanced Lifescience Technologies",
   description: "Advanced Lifescience Technologies Pvt. Ltd.",
+  icons: {
+    icon: "/AdvancedLifescienceLogoPNG.png",
+  },
 };
 
 export default function RootLayout({
@@ -33,6 +37,7 @@ export default function RootLayout({
           <Header />
         </header>
         {children}
+        <CustomFloatButton />
         <Footer />
       </body>
     </html>

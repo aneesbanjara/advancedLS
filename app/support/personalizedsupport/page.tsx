@@ -1,9 +1,9 @@
+import SubHeader from "@/components/subheader/SubHeader";
+
 export default function PersonalizedSupport() {
   return (
     <section>
-      <div className="flex flex-row justify-start bg-gradient-to-r from-[#ADD8E6] to-[#00008B] text-white px-36 py-8">
-        <div className="text-4xl">Personalized Support</div>
-      </div>
+      <SubHeader>Personalized Support</SubHeader>
       <div className="aboutUsHeading text-center text-3xl mx-[10%] my-[5%] px-4 py-2 rounded-xl text-[#8b229b] font-medium ">
         Hands-On Product Learning
       </div>

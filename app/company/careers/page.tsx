@@ -1,16 +1,90 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { Tabs } from "antd";
 import type { TabsProps } from "antd";
-import { Button, Form, Input } from "antd";
+import { Button, Form, Input, message } from "antd";
 
 interface FormValues {
-  name: string;
+  firstName: string;
+  lastName: string;
   email: string;
-  password: string;
+  phone: string;
+  cv: File | null;
 }
 
 export default function Careers() {
+  const [loading, setLoading] = useState<boolean>(false);
+  const [cvFile, setCvFile] = useState<File | null>(null); // State to store the uploaded CV file
+  const [messageApi, contextHolder] = message.useMessage();
+  const [form] = Form.useForm();
+
+  const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    if (event.target.files && event.target.files.length > 0) {
+      setCvFile(event.target.files[0]); // Update the state with the selected file
+    } else {
+      setCvFile(null); // Reset if no file is selected
+    }
+  };
+
+  const onFinish = async (values: Omit<FormValues, "cv">) => {
+    setLoading(true);
+    messageApi.open({
+      type: "loading",
+      content: "Submitting your application...",
+      duration: 0, // Keep it open until destroyed manually
+    });
+    try {
+      const formData = new FormData();
+
+      // Append form fields
+      formData.append("firstName", values.firstName);
+      formData.append("lastName", values.lastName);
+      formData.append("email", values.email);
+      formData.append("phone", values.phone);
+
+      // Append the uploaded file
+      if (cvFile) {
+        formData.append("cv", cvFile, cvFile.name);
+      }
+
+      const response = await fetch("/api/careers/unsolicated-application", {
+        method: "POST",
+        body: formData,
+      });
+
+      if (response.ok) {
+        console.log("Submitting application successful!");
+        messageApi.destroy();
+        messageApi.open({
+          type: "success",
+          content: "Application submitted successfully!",
+          duration: 3,
+        });
+        form.resetFields();
+        setCvFile(null);
+      } else {
+        const errorData = await response.json();
+        console.error(`Failed to submit inquiry: ${errorData.message}`);
+        messageApi.destroy();
+        messageApi.open({
+          type: "error",
+          content: "Failed to submit application. Please try again.",
+          duration: 3,
+        });
+      }
+    } catch (error) {
+      console.error("Error submitting application:", error);
+      messageApi.destroy();
+      messageApi.open({
+        type: "error",
+        content: "Something went wrong. Please try again later.",
+        duration: 3,
+      });
+    } finally {
+      setLoading(false);
+    }
+  };
+
   const items: TabsProps["items"] = [
     {
       key: "1",
@@ -19,29 +93,28 @@ export default function Careers() {
       ),
       children: (
         <>
-          <Form layout="vertical">
+          {contextHolder}
+          <Form layout="vertical" onFinish={onFinish} form={form}>
             <div className="flex flex-row gap-8 justify-between">
               <Form.Item<FormValues>
                 label="First Name"
-                name="name"
+                name="firstName"
                 rules={[
                   { required: true, message: "Please input your first name!" },
-                  { min: 2, message: "Name must be at least 2 characters." },
                 ]}
                 className="w-full"
               >
-                <Input placeholder="Enter your name" />
+                <Input placeholder="Enter your first name" />
               </Form.Item>
               <Form.Item<FormValues>
                 label="Last Name"
-                name="name"
+                name="lastName"
                 rules={[
                   { required: true, message: "Please input your last name!" },
-                  { min: 2, message: "Name must be at least 2 characters." },
                 ]}
                 className="w-full"
               >
-                <Input placeholder="Enter your name" />
+                <Input placeholder="Enter your last name" />
               </Form.Item>
             </div>
             <div className="flex flex-row gap-8 justify-between">
@@ -49,6 +122,10 @@ export default function Careers() {
                 label="Email"
                 name="email"
                 rules={[
+                  {
+                    type: "email",
+                    message: "The input is not valid E-mail!",
+                  },
                   { required: true, message: "Please input your email!" },
                 ]}
                 className="w-full"
@@ -57,32 +134,32 @@ export default function Careers() {
               </Form.Item>
               <Form.Item<FormValues>
                 label="Phone"
-                name="name"
+                name="phone"
                 rules={[
-                  { required: true, message: "Please input your name!" },
+                  {
+                    required: true,
+                    message: "Please input your phone number!",
+                  },
                   { min: 10, message: "Name must be at least 10 characters." },
                   { max: 10, message: "Name must be at least 10 characters." },
                 ]}
                 className="w-full"
               >
-                <Input type="number" placeholder="Enter your phone number" />
+                <Input type="text" placeholder="Enter your phone number" />
               </Form.Item>
             </div>
             <div className="flex flex-row gap-8 justify-between">
-              <Form.Item<FormValues>
+              <Form.Item
                 label="Upload your CV"
-                name="name"
-                rules={[
-                  { required: true, message: "Please input your email!" },
-                ]}
-                className="w-full"
+                name="cv"
+                rules={[{ required: true }]}
               >
-                <Input type="file" />
+                <Input type="file" onChange={handleFileChange} />
               </Form.Item>
             </div>
             <div className="flex flex-row gap-8 justify-between">
-              <Form.Item label={null}>
-                <Button type="primary" htmlType="submit">
+              <Form.Item>
+                <Button type="primary" loading={loading} htmlType="submit">
                   Submit
                 </Button>
               </Form.Item>
@@ -97,9 +174,10 @@ export default function Careers() {
       children: "Sorry, there are no opportunities available at this time.",
     },
   ];
+
   return (
     <section>
-      <div className="flex flex-row justify-start bg-gradient-to-r from-[#ADD8E6] to-[#00008B] text-white px-36 py-8">
+      <div className="flex flex-row justify-start bg-gradient-to-r from-[#0044cc] to-[#0088ff] text-white px-36 py-8">
         <div className="text-4xl">Careers</div>
       </div>
       <div className="mx-[20%] my-[2%] text-2xl">

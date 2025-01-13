@@ -1,7 +1,7 @@
 export default function AboutUs() {
   return (
     <section className="">
-      <div className="flex flex-row justify-start bg-gradient-to-r from-[#ADD8E6] to-[#00008B] text-white px-36 py-8">
+      <div className="flex flex-row justify-start bg-gradient-to-r from-[#0044cc] to-[#0088ff] text-white px-36 py-8">
         <div className="text-4xl">About Advanced Lifescience</div>
       </div>
       <div className="mx-[20%] my-[8%] text-2xl">

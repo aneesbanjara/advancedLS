@@ -1,13 +1,12 @@
 import InquiryForm from "@/components/inquiry/InquiryForm";
+import SubHeader from "@/components/subheader/SubHeader";
 import { Alert } from "antd";
 import Marquee from "react-fast-marquee";
 
 export default function Inquiry() {
   return (
     <section>
-      <div className="flex flex-row justify-start bg-gradient-to-r from-[#ADD8E6] to-[#00008B] text-white px-36 py-8">
-        <div className="text-4xl">Inquiry Form</div>
-      </div>
+      <SubHeader>Inquiry Form</SubHeader>
       <div className="flex flex-col gap-5 mx-[20%] my-[5%]">
         <Alert
           type="info"

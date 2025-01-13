@@ -1,9 +1,9 @@
+import SubHeader from "@/components/subheader/SubHeader";
+
 export default function ServiceAndRepairs() {
   return (
     <section>
-      <div className="flex flex-row justify-start bg-gradient-to-r from-[#ADD8E6] to-[#00008B] text-white px-36 py-8">
-        <div className="text-4xl">Service & Repairs</div>
-      </div>
+      <SubHeader>Service & Repairs</SubHeader>
       <div className="mx-[15%] my-[3%] text-2xl">
         <p>
           At Advanced Lifescience, we take pride in SERVICE & REPAIRS as one of

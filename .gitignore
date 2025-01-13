@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# google sheet service account
+/config/modular-sorter-446608-q3-cbf999e1688d.json
