@@ -1,6 +1,16 @@
 import sld301Img from "@/public/images/diagnostics/slitLamps/sl-d301.png";
 import ProductDetails from "@/components/productDetails/ProductDetails";
 
+import type { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "SL-D301 – Advanced Lifescience Technologies",
+  description: "The Combined Result of Optics and Technology",
+  alternates: {
+    canonical:
+      "https://www.altplnepal.com/products/diagnostics/slit-lamps/sl-d301/",
+  },
+};
+
 export default function SLD301() {
   return (
     <ProductDetails

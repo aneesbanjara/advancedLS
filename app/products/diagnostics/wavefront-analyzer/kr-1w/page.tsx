@@ -1,6 +1,17 @@
 import kr1wImg from "@/public/images/diagnostics/wavefrontAnalyser/kr-1w.png";
 import ProductDetails from "@/components/productDetails/ProductDetails";
 
+import type { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "KR-1W – Advanced Lifescience Technologies",
+  description:
+    "Reliable decision support for the demanding cataract & refractive surgeon",
+  alternates: {
+    canonical:
+      "https://www.altplnepal.com/products/diagnostics/wavefront-analyzer/kr-1w/",
+  },
+};
+
 export default function KR1W() {
   return (
     <ProductDetails

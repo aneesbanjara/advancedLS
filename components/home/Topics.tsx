@@ -13,6 +13,7 @@ export default function Topics() {
             alt="Conference image"
             className="w-[30%] object-contain"
             priority
+            unoptimized
           />
         </Link>
         <Link href="/" className="border-2 border-red-600">
@@ -21,6 +22,7 @@ export default function Topics() {
             alt="Conference image"
             className="w-[30%] object-contain"
             priority
+            unoptimized
           />
         </Link>
       </div>

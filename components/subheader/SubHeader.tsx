@@ -38,12 +38,16 @@ export default function SubHeader({ children }: { children: React.ReactNode }) {
   const { from, to } = colors[randomIndex];
   return (
     <div
-      className={`flex flex-row justify-start text-white px-36 py-8`}
+      className={`flex flex-row justify-start text-white 
+             px-4 sm:px-10 md:px-20 lg:px-36 
+             py-4 sm:py-6 lg:py-4`}
       style={{
         background: `linear-gradient(to right, ${from}, ${to})`,
       }}
     >
-      <div className="text-4xl">{children}</div>
+      <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold">
+        {children}
+      </div>
     </div>
   );
 }

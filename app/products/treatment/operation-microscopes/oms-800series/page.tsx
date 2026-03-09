@@ -1,6 +1,16 @@
 import oms800seriesImg from "@/public/images/treatment/operationMicroscopes/oms-800series.png";
 import ProductDetails from "@/components/productDetails/ProductDetails";
 
+import type { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "OMS-800 series – Advanced Lifescience Technologies",
+  description: "Extensive focus range and high versatlity",
+  alternates: {
+    canonical:
+      "https://www.altplnepal.com/products/treatment/operation-microscopes/oms-800series/",
+  },
+};
+
 export default function OMS800series() {
   return (
     <ProductDetails

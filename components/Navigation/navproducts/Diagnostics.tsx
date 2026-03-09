@@ -8,14 +8,14 @@ export default function Diagnostics({ toggleProductsMenu }: DiagnosticsProps) {
   return (
     <div className="diagnostics ">
       <div className="flex justify-between flex-wrap my-4 p-4 w-full">
-        <div className="w-[30%] px-1 py-2 ">
+        <div className="w-full sm:w-[30%] px-1 py-2 ">
           <div className="text-sm font-bold text-[#4169E1] border-black-500">
             <Link
               href="/products/diagnostics/oct"
               className="hover:text-[#E77723]"
               onClick={() => toggleProductsMenu()}
             >
-              OPTICAL COHERENCE TOMOGRAPHY
+              OPTICAL COHERENCE TOMOGRAPHY (OCT)
             </Link>
           </div>
           <div className="text-sm font-bold text-[#555]">
@@ -33,11 +33,11 @@ export default function Diagnostics({ toggleProductsMenu }: DiagnosticsProps) {
               className="hover:text-[#E77723]"
               onClick={() => toggleProductsMenu()}
             >
-              Triton
+              DRI OCT Triton
             </Link>
           </div>
         </div>
-        <div className="w-[30%] px-1 py-2">
+        <div className="w-full sm:w-[30%] px-1 py-2">
           <div className="text-sm font-bold text-[#4169E1] border-black-500">
             <Link
               href="/products/diagnostics/perimeters"
@@ -57,7 +57,7 @@ export default function Diagnostics({ toggleProductsMenu }: DiagnosticsProps) {
             </Link>
           </div>
         </div>
-        <div className="w-[30%] px-1 py-2">
+        <div className="w-full sm:w-[30%] px-1 py-2">
           <div className="text-sm font-bold text-[#4169E1] border-black-500">
             <Link
               href="/products/diagnostics/axiallength"
@@ -77,7 +77,7 @@ export default function Diagnostics({ toggleProductsMenu }: DiagnosticsProps) {
             </Link>
           </div>
         </div>
-        <div className="w-[30%] px-1 py-2">
+        <div className="w-full sm:w-[30%] px-1 py-2">
           <div className="text-sm font-bold text-[#4169E1] border-black-500">
             <Link
               href="/products/diagnostics/biometer"
@@ -97,7 +97,7 @@ export default function Diagnostics({ toggleProductsMenu }: DiagnosticsProps) {
             </Link>
           </div>
         </div>
-        <div className="w-[30%] px-1 py-2">
+        <div className="w-full sm:w-[30%] px-1 py-2">
           <div className="text-sm font-bold text-[#4169E1] border-black-500">
             <Link
               href="/products/diagnostics/slit-lamps"
@@ -162,7 +162,7 @@ export default function Diagnostics({ toggleProductsMenu }: DiagnosticsProps) {
             </Link>
           </div>
         </div>
-        <div className="w-[30%] px-1 py-2">
+        <div className="w-full sm:w-[30%] px-1 py-2">
           <div className="text-sm font-bold text-[#4169E1] border-black-500">
             <Link
               href="/products/diagnostics/wavefront-analyzer"
@@ -182,7 +182,7 @@ export default function Diagnostics({ toggleProductsMenu }: DiagnosticsProps) {
             </Link>
           </div>
         </div>
-        <div className="w-[30%] px-1 py-2">
+        <div className="w-full sm:w-[30%] px-1 py-2">
           <div className="text-sm font-bold text-[#4169E1] border-black-500">
             <Link
               href="/products/diagnostics/fundus-cameras"
@@ -226,6 +226,26 @@ export default function Diagnostics({ toggleProductsMenu }: DiagnosticsProps) {
               onClick={() => toggleProductsMenu()}
             >
               TRC-50DX
+            </Link>
+          </div>
+        </div>
+        <div className="w-full sm:w-[30%] px-1 py-2">
+          <div className="text-sm font-bold text-[#4169E1] border-black-500">
+            <Link
+              href="/products/diagnostics/specular-microscope"
+              className="hover:text-[#E77723]"
+              onClick={() => toggleProductsMenu()}
+            >
+              SPECULAR MICROSCOPE
+            </Link>
+          </div>
+          <div className="text-sm font-bold text-[#555]">
+            <Link
+              href="/products/diagnostics/specular-microscope/sp-1p"
+              className="hover:text-[#E77723]"
+              onClick={() => toggleProductsMenu()}
+            >
+              SP-1P
             </Link>
           </div>
         </div>

@@ -1,5 +1,6 @@
 import Margin from "@/components/margin/Margin";
 import SubHeader from "@/components/subheader/SubHeader";
+import trk3omniaImg from "@/public/images/examination/tonometer/trk-3-omnia.png";
 import ct800seriesImg from "@/public/images/examination/tonometer/ct-800series.png";
 import ct11pImg from "@/public/images/examination/tonometer/ct_1_1p.png";
 import trk2pImg from "@/public/images/examination/tonometer/trk-2p.png";
@@ -11,6 +12,13 @@ export default function Tonometer() {
       <SubHeader>Tonometer</SubHeader>
       <Margin>
         <div className="flex flex-row gap-8 justify-between items-start flex-wrap">
+          <Product
+            linkTo="/products/examination/tonometer/trk-3-omnia"
+            imgSrc={trk3omniaImg}
+            imgAlt="TRK-3 OMNIA image"
+            productName="TRK-3 OMNIA"
+            para="The TRK-3 OMNIA is a multifunctional 4-in-1 device that combines refractometer, keratometer, tonometer and pachymeter into one instrument. "
+          />
           <Product
             linkTo="/products/examination/tonometer/ct-800series"
             imgSrc={ct800seriesImg}

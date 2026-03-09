@@ -1,6 +1,16 @@
 import solosImg from "@/public/images/examination/lensmeter/solos.png";
 import ProductDetails from "@/components/productDetails/ProductDetails";
 
+import type { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "SOLOS – Advanced Lifescience Technologies",
+  description: "Beyond conventional Lensometry",
+  alternates: {
+    canonical:
+      "https://www.altplnepal.com/products/examination/lensmeter/solos/",
+  },
+};
+
 export default function SOLOS() {
   return (
     <ProductDetails

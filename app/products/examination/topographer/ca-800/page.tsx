@@ -1,6 +1,16 @@
 import ca800Img from "@/public/images/examination/topographer/ca-800.png";
 import ProductDetails from "@/components/productDetails/ProductDetails";
 
+import type { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "CA-800 series – Advanced Lifescience Technologies",
+  description: "Corneal topography and dry eye workstation",
+  alternates: {
+    canonical:
+      "https://www.altplnepal.com/products/examination/topographer/ca-800/",
+  },
+};
+
 export default function CA800() {
   return (
     <ProductDetails

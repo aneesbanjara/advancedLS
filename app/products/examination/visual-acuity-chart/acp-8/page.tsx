@@ -1,6 +1,16 @@
 import acp8Img from "@/public/images/examination/visualAcuityChart/acp-8.png";
 import ProductDetails from "@/components/productDetails/ProductDetails";
 
+import type { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "ACP-8 – Advanced Lifescience Technologies",
+  description: "Auto Chart Projector",
+  alternates: {
+    canonical:
+      "https://www.altplnepal.com/products/examination/visual-acuity-chart/acp-8/",
+  },
+};
+
 export default function ACP8() {
   return (
     <ProductDetails

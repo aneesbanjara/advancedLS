@@ -1,6 +1,16 @@
 import kr1Img from "@/public/images/examination/autoRefractometer/kr-1.png";
 import ProductDetails from "@/components/productDetails/ProductDetails";
 
+import type { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "KR-1 – Advanced Lifescience Technologies",
+  description: "Fully automated, easy-to-use Ketrato-Refractometer",
+  alternates: {
+    canonical:
+      "https://www.altplnepal.com/products/examination/auto-refractometer/kr-1/",
+  },
+};
+
 export default function KR1() {
   return (
     <ProductDetails

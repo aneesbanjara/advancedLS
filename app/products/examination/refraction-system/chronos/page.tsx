@@ -1,6 +1,17 @@
 import chronosImg from "@/public/images/examination/refractionSystem/chronos.png";
 import ProductDetails from "@/components/productDetails/ProductDetails";
 
+import type { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "Chronos – Advanced Lifescience Technologies",
+  description:
+    "Balancing Innovation with Tradition for an Enhanced Refraction Workflow",
+  alternates: {
+    canonical:
+      "https://www.altplnepal.com/products/examination/refraction-system/chronos/",
+  },
+};
+
 export default function Chronos() {
   return (
     <ProductDetails

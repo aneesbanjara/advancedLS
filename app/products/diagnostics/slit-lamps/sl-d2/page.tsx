@@ -1,11 +1,21 @@
 import sld2Img from "@/public/images/diagnostics/slitLamps/sl-d2.png";
 import ProductDetails from "@/components/productDetails/ProductDetails";
 
+import type { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "SL-D2 – Advanced Lifescience Technologies",
+  description: "The Combined Result of Optics and Technology",
+  alternates: {
+    canonical:
+      "https://www.altplnepal.com/products/diagnostics/slit-lamps/sl-d2/",
+  },
+};
+
 export default function SLD2() {
   return (
     <ProductDetails
       productName="SL-D2"
-      para="A basic slit lamp with digital capability that doesn’t compromise on features and optical quality."
+      para="The blending of quality, versatility and ease of use make digital image capture smooth and effortless. The SL-D series meets the varied demands of eye care specialisits."
       imgSrc={sld2Img}
       imgAlt={"SL-D2 Image"}
       keyFeatures={[

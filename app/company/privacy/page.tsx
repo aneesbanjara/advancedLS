@@ -4,7 +4,7 @@ export default function Privacy() {
   return (
     <section>
       <SubHeader>Privacy Policy</SubHeader>
-      <div className="mx-[15%] my-[5%] text-2xl">
+      <div className="mx-4 my-2 text-sm sm:mx-[15%] sm:my-[5%] sm:text-2xl text-justify">
         <p>
           Advanced Lifescience values the privacy and security of our clients.
           To uphold your right to privacy, we have established the following
@@ -30,11 +30,12 @@ export default function Privacy() {
           Occasionally, we notify our customers about new product launches,
           updates, announcements, and technical webinars. If you prefer not to
           receive such communications, you can opt-out at any time by contacting
-          us at support@advancedlifescience.com.
+          us at support@altplnepal.com.
         </p>
         <br />
-        <div className="aboutUsHeading text-center text-3xl mx-[10%] my-[5%] px-4 py-2 rounded-xl text-[#8b229b] font-medium ">
+        <div className="text-center text-2xl sm:text-3xl font-medium uppercase text-gray-700 tracking-widest relative mb-10">
           Product Disclaimer
+          <div className="mt-3 mx-auto h-[3px] w-24 bg-dashed bg-repeat-x bg-[length:6px_3px] bg-[#0870bd] relative before:content-[''] before:absolute before:w-3 before:h-3 before:rounded-full before:bg-yellow-400 before:-top-1 before:left-1/2 before:-translate-x-1/2 before:shadow-md" />
         </div>
         <p>
           Images shown on our product pages are for illustrative purposes only.

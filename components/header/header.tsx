@@ -1,4 +1,3 @@
-import NavigationMenu from "@/components/Navigation/NavigationMenu";
 import {
   MdOutlineEmail,
   MdOutlineLocationOn,
@@ -8,27 +7,33 @@ import {
 export default function Header() {
   return (
     <>
-      <div className="flex flex-row justify-end gap-8 bg-[#DBDBDB] text-[#636466] px-36 py-0.5">
-        <div className="flex flex-row items-center gap-1">
+      <div
+        className="flex flex-col sm:flex-row flex-wrap sm:justify-end items-start sm:items-center 
+  gap-2 sm:gap-8 
+  bg-black text-[#FAF9F6] 
+  px-2 sm:px-10 md:px-20 lg:px-36 
+  py-1 sm:py-2 
+  text-xs sm:text-sm"
+      >
+        <div className="flex items-center gap-1 sm:gap-2">
           <span>
             <MdOutlineEmail fontSize={20} />
           </span>
-          <span>advancedtechnologiespvtltd@gmail.com</span>
+          <span>info@altplnepal.com</span>
         </div>
-        <div className="flex flex-row items-center">
+        <div className="flex items-center gap-1 sm:gap-2">
           <span>
             <MdOutlinePhone fontSize={20} />
           </span>
           <span>00977-1-4375507</span>
         </div>
-        <div className="flex flex-row items-center">
+        <div className="flex items-center gap-1 sm:gap-2">
           <span>
             <MdOutlineLocationOn fontSize={20} />
           </span>
           <span>Ward no:3, Maharajgunj, Kathmandu, Nepal</span>
         </div>
       </div>
-      <NavigationMenu />
     </>
   );
 }

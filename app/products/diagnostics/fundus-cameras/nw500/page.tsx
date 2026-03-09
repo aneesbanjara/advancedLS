@@ -1,6 +1,17 @@
 import nw500Img from "@/public/images/diagnostics/fundusCameras/nw500.png";
 import ProductDetails from "@/components/productDetails/ProductDetails";
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "NW500 – Advanced Lifescience Technologies",
+  description: "Reliable, sharp-quality imaging with enhanced capability",
+  alternates: {
+    canonical:
+      "https://www.altplnepal.com/products/diagnostics/fundus-cameras/nw500/",
+  },
+};
+
 export default function NW500() {
   return (
     <ProductDetails

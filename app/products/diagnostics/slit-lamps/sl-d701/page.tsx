@@ -1,11 +1,21 @@
 import sld701Img from "@/public/images/diagnostics/slitLamps/sl-d701.png";
 import ProductDetails from "@/components/productDetails/ProductDetails";
 
+import type { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "SL-D701 – Advanced Lifescience Technologies",
+  description: "The Combined Result of Optics and Technology",
+  alternates: {
+    canonical:
+      "https://www.altplnepal.com/products/diagnostics/slit-lamps/sl-d701/",
+  },
+};
+
 export default function SLD701() {
   return (
     <ProductDetails
       productName="SL-D701"
-      para="A complete Slit Lamp with expanded magnification range, digital ready, LED illumination and infra red capability."
+      para="The blending of quality, versatility and ease of use make digital image capture smooth and effortless. The SL-D series meets the varied demands of eye care specialists."
       imgSrc={sld701Img}
       imgAlt={"SL-D701 Image"}
       keyFeatures={[

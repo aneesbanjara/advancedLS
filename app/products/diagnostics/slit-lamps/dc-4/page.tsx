@@ -1,6 +1,16 @@
 import DC4Img from "@/public/images/diagnostics/slitLamps/dc-4.png";
 import ProductDetails from "@/components/productDetails/ProductDetails";
 
+import type { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "DC-4 – Advanced Lifescience Technologies",
+  description: "High quality digital images",
+  alternates: {
+    canonical:
+      "https://www.altplnepal.com/products/diagnostics/slit-lamps/dc-4/",
+  },
+};
+
 export default function DC4() {
   return (
     <ProductDetails

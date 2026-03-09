@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Tabs } from "antd";
 import type { TabsProps } from "antd";
 import { Button, Form, Input, message } from "antd";
+import SubHeader from "@/components/subheader/SubHeader";
 
 interface FormValues {
   firstName: string;
@@ -140,8 +141,14 @@ export default function Careers() {
                     required: true,
                     message: "Please input your phone number!",
                   },
-                  { min: 10, message: "Name must be at least 10 characters." },
-                  { max: 10, message: "Name must be at least 10 characters." },
+                  {
+                    min: 10,
+                    message: "Phone No. must be at least 10 numbers.",
+                  },
+                  {
+                    max: 10,
+                    message: "Phone No. must be at least 10 numbers.",
+                  },
                 ]}
                 className="w-full"
               >
@@ -177,18 +184,16 @@ export default function Careers() {
 
   return (
     <section>
-      <div className="flex flex-row justify-start bg-gradient-to-r from-[#0044cc] to-[#0088ff] text-white px-36 py-8">
-        <div className="text-4xl">Careers</div>
-      </div>
-      <div className="mx-[20%] my-[2%] text-2xl">
+      <SubHeader>Careers</SubHeader>
+      <div className="mx-4 sm:mx-[10%] md:mx-[15%] lg:mx-[20%] my-2 sm:my-[2%] text-xl sm:text-2xl">
         Always on the lookout for fresh talent! Explore our open positions or
         submit your details through the form.
       </div>
-      <div className="mx-[15%] my-[2%]">
+      <div className="mx-4 sm:mx-[10%] md:mx-[12%] lg:mx-[15%] my-2 sm:my-[2%]">
         <Tabs
           defaultActiveKey="1"
           items={items}
-          className="text-2xl border-2 border-[#00008B] p-4 rounded"
+          className="text-lg sm:text-xl md:text-2xl border-2 border-[#00008B] p-2 sm:p-4 rounded"
         />
       </div>
     </section>

@@ -1,5 +1,15 @@
 import Henson9000Img from "@/public/images/diagnostics/perimeters/henson9000.png";
 import ProductDetails from "@/components/productDetails/ProductDetails";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Henson 9000 – Advanced Lifescience Technologies",
+  description: "Advanced detection and monitoring of glaucoma progression",
+  alternates: {
+    canonical:
+      "https://www.altplnepal.com/products/diagnostics/perimeters/henson-9000/",
+  },
+};
 
 export default function Henson9000() {
   return (

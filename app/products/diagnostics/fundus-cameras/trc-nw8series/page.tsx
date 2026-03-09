@@ -1,6 +1,17 @@
 import trcnw8seriesImg from "@/public/images/diagnostics/fundusCameras/trc-nw8series.png";
 import ProductDetails from "@/components/productDetails/ProductDetails";
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "TRC-NW8 Series – Advanced Lifescience Technologies",
+  description: "Multi-functional, non-mydriatic retinal camera",
+  alternates: {
+    canonical:
+      "https://www.altplnepal.com/products/diagnostics/fundus-cameras/trc-nw8series/",
+  },
+};
+
 export default function TRCNW8series() {
   return (
     <ProductDetails

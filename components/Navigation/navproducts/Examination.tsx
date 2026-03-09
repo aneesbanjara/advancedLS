@@ -8,7 +8,7 @@ export default function EXAMINATION({ toggleProductsMenu }: EXAMINATIONProps) {
   return (
     <div className="diagnostics ">
       <div className="flex justify-between flex-wrap my-4 p-4 w-full">
-        <div className="w-[30%] px-1 py-2 ">
+        <div className="w-full sm:w-[30%] px-1 py-2 ">
           <div className="text-sm font-bold text-[#4169E1] border-black-500">
             <Link
               href="/products/examination/auto-refractometer"
@@ -73,7 +73,7 @@ export default function EXAMINATION({ toggleProductsMenu }: EXAMINATIONProps) {
             </Link>
           </div>
         </div>
-        <div className="w-[30%] px-1 py-2">
+        <div className="w-full sm:w-[30%] px-1 py-2">
           <div className="text-sm font-bold text-[#4169E1] border-black-500">
             <Link
               href="/products/examination/lensmeter"
@@ -111,7 +111,7 @@ export default function EXAMINATION({ toggleProductsMenu }: EXAMINATIONProps) {
             </Link>
           </div>
         </div>
-        <div className="w-[30%] px-1 py-2">
+        <div className="w-full sm:w-[30%] px-1 py-2">
           <div className="text-sm font-bold text-[#4169E1] border-black-500">
             <Link
               href="/products/examination/refraction-system"
@@ -131,7 +131,7 @@ export default function EXAMINATION({ toggleProductsMenu }: EXAMINATIONProps) {
             </Link>
           </div>
         </div>
-        <div className="w-[30%] px-1 py-2">
+        <div className="w-full sm:w-[30%] px-1 py-2">
           <div className="text-sm font-bold text-[#4169E1] border-black-500">
             <Link
               href="/products/examination/topographer"
@@ -151,7 +151,7 @@ export default function EXAMINATION({ toggleProductsMenu }: EXAMINATIONProps) {
             </Link>
           </div>
         </div>
-        <div className="w-[30%] px-1 py-2">
+        <div className="w-full sm:w-[30%] px-1 py-2">
           <div className="text-sm font-bold text-[#4169E1] border-black-500">
             <Link
               href="/products/examination/tonometer"
@@ -159,6 +159,15 @@ export default function EXAMINATION({ toggleProductsMenu }: EXAMINATIONProps) {
               onClick={() => toggleProductsMenu()}
             >
               TONOMETER
+            </Link>
+          </div>
+          <div className="text-sm font-bold text-[#555]">
+            <Link
+              href="/products/examination/tonometer/trk-3-omnia"
+              className="hover:text-[#E77723]"
+              onClick={() => toggleProductsMenu()}
+            >
+              TRK-3 OMNIA
             </Link>
           </div>
           <div className="text-sm font-bold text-[#555]">
@@ -189,7 +198,7 @@ export default function EXAMINATION({ toggleProductsMenu }: EXAMINATIONProps) {
             </Link>
           </div>
         </div>
-        <div className="w-[30%] px-1 py-2">
+        <div className="w-full sm:w-[30%] px-1 py-2">
           <div className="text-sm font-bold text-[#4169E1] border-black-500">
             <Link
               href="/products/examination/vision-tester"
@@ -205,7 +214,7 @@ export default function EXAMINATION({ toggleProductsMenu }: EXAMINATIONProps) {
               className="hover:text-[#E77723]"
               onClick={() => toggleProductsMenu()}
             >
-              CV-5000S/PRO{" "}
+              CV-5000{" "}
             </Link>
           </div>
           <div className="text-sm font-bold text-[#555]">
@@ -218,7 +227,7 @@ export default function EXAMINATION({ toggleProductsMenu }: EXAMINATIONProps) {
             </Link>
           </div>
         </div>
-        <div className="w-[30%] px-1 py-2">
+        <div className="w-full sm:w-[30%] px-1 py-2">
           <div className="text-sm font-bold text-[#4169E1] border-black-500">
             <Link
               href="/products/examination/visual-acuity-chart"

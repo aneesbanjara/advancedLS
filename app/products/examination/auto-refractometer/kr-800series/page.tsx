@@ -1,6 +1,16 @@
 import kr800seriesImg from "@/public/images/examination/autoRefractometer/kr-800series.png";
 import ProductDetails from "@/components/productDetails/ProductDetails";
 
+import type { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "KR-800 series – Advanced Lifescience Technologies",
+  description: "Workflow efficiency with 3D auto-alignment",
+  alternates: {
+    canonical:
+      "https://www.altplnepal.com/products/examination/auto-refractometer/kr-800series/",
+  },
+};
+
 export default function KR800series() {
   return (
     <ProductDetails

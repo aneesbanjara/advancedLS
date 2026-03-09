@@ -66,7 +66,7 @@ export default function Feedback() {
     <section>
       {contextHolder}
       <SubHeader>Feedback Form</SubHeader>
-      <div className="flex flex-col gap-5 mx-[20%] my-[5%]">
+      <div className="flex flex-col gap-5 mx-4 my-2 sm:mx-[20%] sm:my-[5%]">
         <Alert
           description="We value your feedback and are committed to improving our services. Please share your thoughts and experiences to help us ensure the highest quality of service for all our customers. Your input is important to us!"
           type="info"
@@ -77,7 +77,7 @@ export default function Feedback() {
               label="Full Name"
               name="fullName"
               rules={[
-                { required: true, message: "Please input your first name!" },
+                { required: true, message: "Please input your full name!" },
                 { min: 2, message: "Name must be at least 2 characters." },
               ]}
               className="w-full"
@@ -114,9 +114,12 @@ export default function Feedback() {
               label="Phone"
               name="phone"
               rules={[
-                { required: true, message: "Please input your name!" },
-                { min: 10, message: "Name must be at least 10 characters." },
-                { max: 10, message: "Name must be at least 10 characters." },
+                {
+                  required: true,
+                  message: "Please input your valid phone number!",
+                },
+                { min: 10, message: "Phone No must be at least 10 numbers." },
+                { max: 10, message: "Phone No must be at least 10 numbers." },
               ]}
               className="w-full"
             >

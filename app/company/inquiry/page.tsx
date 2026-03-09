@@ -7,7 +7,7 @@ export default function Inquiry() {
   return (
     <section>
       <SubHeader>Inquiry Form</SubHeader>
-      <div className="flex flex-col gap-5 mx-[20%] my-[5%]">
+      <div className="flex flex-col gap-5 mx-4 my-2 sm:mx-[20%] sm:my-[5%]">
         <Alert
           type="info"
           banner

@@ -1,6 +1,17 @@
 import aladdinImg from "@/public/images/diagnostics/biometer/aladdin.png";
 import ProductDetails from "@/components/productDetails/ProductDetails";
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "DRI OCT Triton – Advanced Lifescience Technologies",
+  description: "Combination optical biometer and corneal topographer",
+  alternates: {
+    canonical:
+      "https://www.altplnepal.com/products/diagnostics/biometer/aladdin/",
+  },
+};
+
 export default function Aladdin() {
   return (
     <ProductDetails

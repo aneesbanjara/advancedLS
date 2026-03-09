@@ -70,7 +70,7 @@ export default function InquiryForm() {
             label="Full Name"
             name="fullName"
             rules={[
-              { required: true, message: "Please input your first name!" },
+              { required: true, message: "Please input your full name!" },
               { min: 2, message: "Fullname must be at least 2 characters." },
             ]}
             className="w-full"
@@ -107,9 +107,9 @@ export default function InquiryForm() {
             label="Phone"
             name="phone"
             rules={[
-              { required: true, message: "Please input your name!" },
-              { min: 10, message: "Name must be at least 10 characters." },
-              { max: 10, message: "Name must be at least 10 characters." },
+              { required: true, message: "Please input your phone number!" },
+              { min: 10, message: "Phone No. must be at least 10 numbers." },
+              { max: 10, message: "Phone No. must be at least 10 numbers." },
             ]}
             className="w-full"
           >

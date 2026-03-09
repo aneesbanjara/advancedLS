@@ -1,6 +1,16 @@
 import myahImg from "@/public/images/diagnostics/axialLength/myah.png";
 import ProductDetails from "@/components/productDetails/ProductDetails";
 
+import type { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "MYAH – Advanced Lifescience Technologies",
+  description: "Build, Manage and Grow Your Myopia & Dry Eye Practice",
+  alternates: {
+    canonical:
+      "https://www.altplnepal.com/products/diagnostics/axiallength/myah/",
+  },
+};
+
 export default function MYAH() {
   return (
     <ProductDetails

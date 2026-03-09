@@ -1,6 +1,16 @@
 import sl2gImg from "@/public/images/diagnostics/slitLamps/sl-2g.png";
 import ProductDetails from "@/components/productDetails/ProductDetails";
 
+import type { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "SL-2G – Advanced Lifescience Technologies",
+  description: "The Combined Result of Optics and Technology",
+  alternates: {
+    canonical:
+      "https://www.altplnepal.com/products/diagnostics/slit-lamps/sl-2g/",
+  },
+};
+
 export default function SL2G() {
   return (
     <ProductDetails

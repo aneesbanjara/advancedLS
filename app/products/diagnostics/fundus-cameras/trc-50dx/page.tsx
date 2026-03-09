@@ -1,5 +1,15 @@
 import trc50dxImg from "@/public/images/diagnostics/fundusCameras/trc-50dx.png";
 import ProductDetails from "@/components/productDetails/ProductDetails";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "TRC-50DX – Advanced Lifescience Technologies",
+  description: "Experience the advantages of TRC-50DX",
+  alternates: {
+    canonical:
+      "https://www.altplnepal.com/products/diagnostics/fundus-cameras/trc-50dx/",
+  },
+};
 
 export default function TRC50DX() {
   return (

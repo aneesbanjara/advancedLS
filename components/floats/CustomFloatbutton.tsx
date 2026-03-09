@@ -3,7 +3,7 @@ import { FloatButton } from "antd";
 import { AiOutlineWhatsApp } from "react-icons/ai";
 
 export default function CustomFloatButton() {
-  const phoneNumber = "9843241880";
+  const phoneNumber = "9851034376";
   const whatsappUrl = `https://wa.me/${phoneNumber}`;
   return (
     <>

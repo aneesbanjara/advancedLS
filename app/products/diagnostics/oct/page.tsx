@@ -1,7 +1,7 @@
 import Margin from "@/components/margin/Margin";
 import SubHeader from "@/components/subheader/SubHeader";
 import maestro2Img from "@/public/images/diagnostics/OCT/maestro2.png";
-import tritonImg from "@/public/images/diagnostics/OCT/triton.png";
+import TritonImg from "@/public/images/diagnostics/OCT/Triton-Pro.png";
 import Product from "@/components/product/Product";
 
 export default function OCT() {
@@ -9,7 +9,7 @@ export default function OCT() {
     <section>
       <SubHeader>Optical Coherence Tomography (OCT)</SubHeader>
       <Margin>
-        <div className="flex flex-row gap-8 justify-between items-start">
+        <div className="flex flex-row flex-wrap gap-8 justify-center sm:justify-between items-start">
           <Product
             linkTo="/products/diagnostics/oct/maestro2"
             imgSrc={maestro2Img}
@@ -22,10 +22,10 @@ export default function OCT() {
           />
           <Product
             linkTo="/products/diagnostics/oct/triton"
-            imgSrc={tritonImg}
+            imgSrc={TritonImg}
             imgAlt="Triton image"
-            productName="Triton"
-            para="The DRI OCT Triton is a multi-modal swept source OCT with a non-mydriatic color fundus camera."
+            productName="DRI OCT Triton"
+            para="TOPCONs SS OCT Angio combines OCT Angiography with Swept Source OCT technology and a long 1050nm wavelength. OCTARA, a proprietary image processing algorithm, provides highly sensitive angiographic detection, allowing for visualisation of vascular structures."
           />
         </div>
       </Margin>

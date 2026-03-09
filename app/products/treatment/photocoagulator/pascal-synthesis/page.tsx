@@ -1,6 +1,17 @@
 import pascalSynthesisSeriesImg from "@/public/images/treatment/photocoagulator/pascalSynthesis.png";
 import ProductDetails from "@/components/productDetails/ProductDetails";
 
+import type { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "PASCAL Synthesis Series – Advanced Lifescience Technologies",
+  description:
+    "PASCAL represents a quantum leap in ophthalmic treatment technology and is committed to helping you deliver effective results for your patients.",
+  alternates: {
+    canonical:
+      "https://www.altplnepal.com/products/treatment/photocoagulator/pascal-synthesis/",
+  },
+};
+
 export default function PascalSynthesis() {
   return (
     <ProductDetails

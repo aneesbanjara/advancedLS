@@ -30,7 +30,7 @@ export default function ProductNavSubMenu({
       <div
         className={`${
           navSubMenu.isDiagnosticssSubMenuOpen ? "headingUnderline" : ""
-        } font-bold text-lg text-[#00008B] cursor-pointer`}
+        } font-bold text-[0.45rem] sm:text-lg text-[#00008B] cursor-pointer`}
         onClick={() => toggleProductsDiagnosticsMenu()}
       >
         DIAGNOSTICS
@@ -39,7 +39,7 @@ export default function ProductNavSubMenu({
       <div
         className={`${
           navSubMenu.isExaminationSubMenuOpen ? "headingUnderline" : ""
-        } font-bold text-lg text-[#00008B] cursor-pointer`}
+        } font-bold text-[0.45rem] sm:text-lg text-[#00008B] cursor-pointer`}
         onClick={() => toggleProductsExaminationMenu()}
       >
         EXAMINATION
@@ -47,7 +47,7 @@ export default function ProductNavSubMenu({
       <div
         className={`${
           navSubMenu.isSoftwareSubMenuOpen ? "headingUnderline" : ""
-        } font-bold text-lg text-[#00008B] cursor-pointer`}
+        } font-bold text-[0.45rem] sm:text-lg text-[#00008B] cursor-pointer`}
         onClick={() => toggleProductsSoftwareMenu()}
       >
         SOFTWARE
@@ -55,7 +55,7 @@ export default function ProductNavSubMenu({
       <div
         className={`${
           navSubMenu.isDataManagementSubMenuOpen ? "headingUnderline" : ""
-        } font-bold text-lg text-[#00008B] cursor-pointer`}
+        } font-bold text-[0.45rem] sm:text-lg text-[#00008B] cursor-pointer`}
         onClick={() => toggleProductsDataManagementMenu()}
       >
         DATA MANAGEMENT
@@ -63,7 +63,7 @@ export default function ProductNavSubMenu({
       <div
         className={`${
           navSubMenu.isTreatmentOrSurgicalSubMenuOpen ? "headingUnderline" : ""
-        } font-bold text-lg text-[#00008B] cursor-pointer`}
+        } font-bold text-[0.45rem] sm:text-lg text-[#00008B] cursor-pointer`}
         onClick={() => toggleProductsTreatmentAndSurgicalMenu()}
       >
         TREATMENT/SURGICAL
@@ -72,7 +72,7 @@ export default function ProductNavSubMenu({
         className="rounded-full padding-4 cursor-pointer hover:text-[#E77723]"
         onClick={() => toggleProductsMenu()}
       >
-        <IoMdClose size={30} />
+        <IoMdClose className="text-[12px] sm:text-[20px] md:text-[28px] lg:text-[36px]" />
       </div>
     </>
   );

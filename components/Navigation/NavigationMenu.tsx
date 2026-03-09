@@ -14,6 +14,7 @@ import ProductNavSubMenu from "./navproducts/productsNavSubMenu/ProductNavSubMen
 import CompanyNavSubMenu from "./navproducts/companyNavSubMenu/CompanyNavSubMenu";
 import SupportNavSubMenu from "./navproducts/supportNavSubMenu/supportNavSubMenu";
 import NewsAndEventsNavSubMenu from "./navproducts/newsAndEventsNavSubMenu/NewsAndEventsNavSubMenu";
+import { RxHamburgerMenu } from "react-icons/rx";
 
 type navSubMenuItem = {
   isProductsMenuOpen: boolean;
@@ -25,6 +26,7 @@ type navSubMenuItem = {
   isSoftwareSubMenuOpen: boolean;
   isDataManagementSubMenuOpen: boolean;
   isTreatmentOrSurgicalSubMenuOpen: boolean;
+  isMobileMenuOpen: boolean;
 };
 
 export default function NavigationMenu() {
@@ -38,9 +40,41 @@ export default function NavigationMenu() {
     isSoftwareSubMenuOpen: false,
     isDataManagementSubMenuOpen: false,
     isTreatmentOrSurgicalSubMenuOpen: false,
+    isMobileMenuOpen: false,
   });
 
-  // products open with diagnostics defult
+  const toggleMobileMenu = () => {
+    setNavSubMenu((prev) => {
+      return {
+        ...prev,
+        isProductsMenuOpen: false,
+        isDiagnosticssSubMenuOpen: false,
+        isExaminationSubMenuOpen: false,
+        isTreatmentOrSurgicalSubMenuOpen: false,
+        isCompanyMenuOpen: false,
+        isSupportMenuOpen: false,
+        isNewsAndEventsMenuOpen: false,
+        isMobileMenuOpen: !prev.isMobileMenuOpen,
+      };
+    });
+  };
+  const toggleHomeMenu = () => {
+    setNavSubMenu((prev) => {
+      return {
+        ...prev,
+        isProductsMenuOpen: false,
+        isDiagnosticssSubMenuOpen: false,
+        isExaminationSubMenuOpen: false,
+        isTreatmentOrSurgicalSubMenuOpen: false,
+        isCompanyMenuOpen: false,
+        isSupportMenuOpen: false,
+        isNewsAndEventsMenuOpen: false,
+        isMobileMenuOpen: false,
+      };
+    });
+  };
+
+  // products open with diagnostics default
   const toggleProductsMenu = () => {
     setNavSubMenu((prev) => {
       return {
@@ -54,6 +88,7 @@ export default function NavigationMenu() {
         isCompanyMenuOpen: false,
         isSupportMenuOpen: false,
         isNewsAndEventsMenuOpen: false,
+        isMobileMenuOpen: false,
       };
     });
   };
@@ -72,6 +107,7 @@ export default function NavigationMenu() {
         isTreatmentOrSurgicalSubMenuOpen: false,
         isSupportMenuOpen: false,
         isNewsAndEventsMenuOpen: false,
+        isMobileMenuOpen: false,
       };
     });
   };
@@ -90,6 +126,7 @@ export default function NavigationMenu() {
         isProductsMenuOpen: false,
         isCompanyMenuOpen: false,
         isNewsAndEventsMenuOpen: false,
+        isMobileMenuOpen: false,
       };
     });
   };
@@ -108,6 +145,7 @@ export default function NavigationMenu() {
         isProductsMenuOpen: false,
         isCompanyMenuOpen: false,
         isSupportMenuOpen: false,
+        isMobileMenuOpen: false,
       };
     });
   };
@@ -122,6 +160,7 @@ export default function NavigationMenu() {
         isSoftwareSubMenuOpen: false,
         isDataManagementSubMenuOpen: false,
         isTreatmentOrSurgicalSubMenuOpen: false,
+        isMobileMenuOpen: false,
       };
     });
   };
@@ -135,6 +174,7 @@ export default function NavigationMenu() {
         isSoftwareSubMenuOpen: false,
         isDataManagementSubMenuOpen: false,
         isTreatmentOrSurgicalSubMenuOpen: false,
+        isMobileMenuOpen: false,
       };
     });
   };
@@ -148,6 +188,7 @@ export default function NavigationMenu() {
         isSoftwareSubMenuOpen: true,
         isDataManagementSubMenuOpen: false,
         isTreatmentOrSurgicalSubMenuOpen: false,
+        isMobileMenuOpen: false,
       };
     });
   };
@@ -161,6 +202,7 @@ export default function NavigationMenu() {
         isSoftwareSubMenuOpen: false,
         isDataManagementSubMenuOpen: true,
         isTreatmentOrSurgicalSubMenuOpen: false,
+        isMobileMenuOpen: false,
       };
     });
   };
@@ -174,6 +216,7 @@ export default function NavigationMenu() {
         isSoftwareSubMenuOpen: false,
         isDataManagementSubMenuOpen: false,
         isTreatmentOrSurgicalSubMenuOpen: true,
+        isMobileMenuOpen: false,
       };
     });
   };
@@ -200,6 +243,7 @@ export default function NavigationMenu() {
         isCompanyMenuOpen: false,
         isSupportMenuOpen: false,
         isNewsAndEventsMenuOpen: false,
+        isMobileMenuOpen: false,
       }));
     }
   };
@@ -226,13 +270,28 @@ export default function NavigationMenu() {
   ]);
 
   return (
-    <nav className="sticky top-0">
+    <nav className="sticky top-0 z-100">
       <div className=" w-full">
-        <div className="flex flex-row justify-between gap-4 bg-gradient-to-r from-[#0044cc] to-[#0088ff] text-white px-36 py-8 shadow-md ">
-          <div className="text-3xl">
-            Advanced <span className="font-thin">Lifescience</span>
+        <div className="flex justify-between items-center bg-gradient-to-r from-[#6b21a8] to-[#0d9488] text-white px-6 md:px-24 py-2 md:py-4 shadow-md">
+          <div className="flex items-center space-x-3">
+            <div className="h-10 w-1 bg-white/50 rounded"></div>
+            <div className="flex flex-col justify-center">
+              <div className="text-2xl font-semibold text-white tracking-wide">
+                Advanced
+              </div>
+              <div className="text-xs font-medium text-white/70 uppercase">
+                Lifescience Technologies
+              </div>
+            </div>
           </div>
-          <div className="flex flex-row gap-6 text-base font-medium">
+
+          <div className="md:hidden">
+            <button onClick={() => toggleMobileMenu()}>
+              <RxHamburgerMenu />
+            </button>
+          </div>
+
+          <div className="hidden md:flex flex-row gap-6 text-base md:text-lg font-medium tracking-wide items-center">
             <div className="px-2">
               <Link href="/">HOME</Link>
             </div>
@@ -257,6 +316,42 @@ export default function NavigationMenu() {
             </div>
           </div>
         </div>
+        {navSubMenu.isMobileMenuOpen && (
+          <div className="absolute top-full left-0 w-full bg-gradient-to-r from-[#6b21a8] to-[#0d9488] flex flex-col items-start px-8 py-4 md:hidden z-50">
+            {/* You can reuse the same nav items here */}
+            <Link
+              href="/"
+              className="py-2 text-white w-full hover:underline"
+              onClick={() => toggleHomeMenu()}
+            >
+              HOME
+            </Link>
+            <div
+              onClick={() => toggleProductsMenu()}
+              className="py-2 text-white w-full cursor-pointer"
+            >
+              PRODUCTS
+            </div>
+            <div
+              onClick={() => toggleCompanyMenu()}
+              className="py-2 text-white w-full cursor-pointer"
+            >
+              ORGANIZATION
+            </div>
+            <div
+              onClick={() => toggleSupportMenu()}
+              className="py-2 text-white w-full cursor-pointer"
+            >
+              SUPPORT
+            </div>
+            <div
+              onClick={() => toggleNewsAndEventsMenu()}
+              className="py-2 text-white w-full cursor-pointer"
+            >
+              MEDIA CENTER
+            </div>
+          </div>
+        )}
         <div
           ref={productsMenuRef}
           className={`navSubMenu ${

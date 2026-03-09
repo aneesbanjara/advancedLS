@@ -1,6 +1,16 @@
 import sld4Img from "@/public/images/diagnostics/slitLamps/sl-d4.png";
 import ProductDetails from "@/components/productDetails/ProductDetails";
 
+import type { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "SL-D4 LED – Advanced Lifescience Technologies",
+  description: "The Combined Result of Optics and Technology",
+  alternates: {
+    canonical:
+      "https://www.altplnepal.com/products/diagnostics/slit-lamps/sl-d4/",
+  },
+};
+
 export default function SLD4() {
   return (
     <ProductDetails

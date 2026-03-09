@@ -9,7 +9,7 @@ export default function TreatmentAndSurgical({
   return (
     <div className="diagnostics ">
       <div className="flex justify-between flex-wrap my-4 p-4 w-full">
-        <div className="w-[30%] px-1 py-2 ">
+        <div className="w-full sm:w-[30%] px-1 py-2 ">
           <div className="text-sm font-bold text-[#4169E1] border-black-500">
             <Link
               href="/products/treatment/photocoagulator"
@@ -56,7 +56,7 @@ export default function TreatmentAndSurgical({
             </Link>
           </div>
         </div>
-        <div className="w-[30%] px-1 py-2">
+        <div className="w-full sm:w-[30%] px-1 py-2">
           <div className="text-sm font-bold text-[#4169E1] border-black-500">
             <Link
               href="/products/treatment/operation-microscopes"
@@ -85,23 +85,68 @@ export default function TreatmentAndSurgical({
             </Link>
           </div>
         </div>
-        <div className="w-[30%] px-1 py-2">
+        <div className="w-full sm:w-[30%] px-1 py-2">
           <div className="text-sm font-bold text-[#4169E1] border-black-500">
             <Link
-              href="/products/treatment/specular-microscope"
+              href="/products/treatment/iridex-products"
               className="hover:text-[#E77723]"
               onClick={() => toggleProductsMenu()}
             >
-              SPECULAR MICROSCOPE
+              IRIDEX PRODUCTS
             </Link>
           </div>
           <div className="text-sm font-bold text-[#555]">
             <Link
-              href="/products/treatment/specular-microscope/sp-1p"
+              href="/products/treatment/iridex-products/iridex-PASCAL"
               className="hover:text-[#E77723]"
               onClick={() => toggleProductsMenu()}
             >
-              SP-1P
+              Iridex PASCAL®
+            </Link>
+          </div>
+          <div className="text-sm font-bold text-[#555]">
+            <Link
+              href="/products/treatment/iridex-products/PASCAL-synthesis-twinstar"
+              className="hover:text-[#E77723]"
+              onClick={() => toggleProductsMenu()}
+            >
+              PASCAL® Synthesis TwinStar
+            </Link>
+          </div>
+          <div className="text-sm font-bold text-[#555]">
+            <Link
+              href="/products/treatment/iridex-products/oculight-series"
+              className="hover:text-[#E77723]"
+              onClick={() => toggleProductsMenu()}
+            >
+              OcuLight® Series
+            </Link>
+          </div>
+          <div className="text-sm font-bold text-[#555]">
+            <Link
+              href="/products/treatment/iridex-products/IQ532"
+              className="hover:text-[#E77723]"
+              onClick={() => toggleProductsMenu()}
+            >
+              IQ532®
+            </Link>
+          </div>
+          <div className="text-sm font-bold text-[#555]">
+            <Link
+              href="/products/treatment/iridex-products/IQ577"
+              className="hover:text-[#E77723]"
+              onClick={() => toggleProductsMenu()}
+            >
+              IQ577®
+            </Link>
+          </div>
+          <div className="text-sm font-bold text-[#555]">
+            <Link
+              href="/products/treatment/iridex-products/cyclo-G6"
+              className="hover:text-[#E77723]"
+              onClick={() => toggleProductsMenu()}
+            >
+              Cyclo G6®
             </Link>
           </div>
         </div>
